@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Loan Calculator</title>
+    <link rel="stylesheet" href="/home/alican/Odong Sunday/Odong Sunday/calculator/calculator.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="info">
+          <label>
+              <b>Enter Loan Information:</b>
+          </label> 
+      </div>
+      <div class="graph_info">
+        <label for="">
+          Loan Balance, Cumulative Equity, and Interest payments
+        </label>
+      </div>
+    </div>
+      <div class="data">
+    <div class="calculator">
+        <form name="loandata">
+          <table>              
+            <tr>
+              <td>
+                <label>
+                    Amount of the loan($):
+                </label> 
+              </td>
+              <td>
+                <input type="text" id="loan_amount" style="width: 120px" onchange="calculate();">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                    Annual Interest(%):
+                </label>
+              </td>
+              <td>
+                <input type="text" id="annual_interest" style="width: 120px" onchange="calculate();">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                    Repayment Period(Years):
+                </label> 
+              </td>
+              <td>
+                <input type="text" id="repayment_period" style="width: 120px" onchange="calculate();"></td>
+            </tr>
+            <tr>
+              <td>ZipCode (To find lenders):</td>
+              <td>
+                <input type="text" id="repayment_period" style="width: 120px" onchange="calculate();">
+              </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                            <b>Approximate Payments:</b>
+                    </label>
+                </td>
+            <td>
+              <input type="button" value="Compute" onclick="calculate();">
+            </td></tr>
+            <tr>
+              <td>Monthly Payment:</td>
+              <td>
+                <input type="text" id="monthly_payment" style="width: 120px">
+              </td>
+            </tr>
+            <tr>
+              <td>Total Payment:</td>
+              <td><input type="text" id="total_payment" style="width: 120px"></td>
+            </tr>
+            <tr>
+              <td>Total Interest:</td>
+              <td><input type="text" id="total_interest" style="width: 120px;"></td>
+            </tr>
+          </table>
+        </form>
+      </div>  
+    <div class="graph">
+      <fieldset>
+      </fieldset>
+    </div>
+  </div>
+  </div>
+<script language="JavaScript">
+function calculate() {  
+    
+    var loan_amount = document.getElementById("loan_amount").value;
+    var annual_interest = document.getElementById("annual_interest").value;
+    var repayment_period = document.getElementById("repayment_period").value;
+
+
+    var monthly_interest = annual_interest / 100 / 12;
+    var monthly_repayment_period = repayment_period * 12;
+
+    // // Now compute the monthly payment figure, using esoteric math.
+    var x = Math.pow(1 + monthly_interest, monthly_repayment_period);
+    var monthly = (loan_amount*x*monthly_interest)/(x-1);
+
+    // Check that the result is a finite number. If so, display the results.
+    if (!isNaN(monthly) && (monthly != Number.POSITIVE_INFINITY) && (monthly != Number.NEGATIVE_INFINITY)) {
+
+        document.getElementById("monthly_payment").value =  ("$"+(monthly).toFixed(2));
+        document.getElementById("total_payment").value = ("$"+(monthly * monthly_repayment_period).toFixed(2));
+        document.getElementById("total_interest").value = ("$"+((monthly * monthly_repayment_period) - loan_amount).toFixed(2));
+    }
+    else {
+        document.getElementById("monthly_payment").value = "";
+        document.getElementById("total_payment").value = "";
+        document.getElementById("total_interest").value = "";
+    }
+}
+</script>
+</body>
+</html>
+
+///home/alican/Odong Sunday/contact_us/Personal Profile/calculator.html

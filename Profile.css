@@ -1,0 +1,236 @@
+.container{
+    /* background-color: cadetblue; */
+    margin-top: 0;
+    padding-top: 2px;
+    height: 850px;
+    width: 100%;
+    background-color:#F7F7F7;
+}
+
+.container .top{
+    padding-bottom: 20px;
+    background-image: linear-gradient(to right,#63BCFA , #8390FB) ;
+    width: 99.5%;
+    height: 42%;
+    padding-left: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container .top .photo{
+    height: 99%;
+    width: 50%;
+    /* background-color: black; */
+    padding-top: 10px;
+    position: relative;
+    float: left;
+}
+
+.container .top .photo .photo_inner{
+    padding-left: 56.5%;
+    width: 50%;
+}
+
+.container .top .introduction{
+    height: 99%;
+    width: 39.5%;
+    /* background-color: blueviolet; */
+    padding-top: 10px;
+    position: relative;
+    float: right;
+}
+
+.container .top .menu{
+    width: 5%;
+}
+
+.container .top .introduction .introduction_inner{
+    padding-top: 17%;
+    width: 90%;
+}
+
+.container .top .introduction .introduction_inner .introduction_labels{
+    color: white;
+}
+
+.container .look{
+    height: 10%;
+    width: 100%;
+    padding-top: 60px;
+    /* background-color: yellow; */
+}
+
+.container .look .look_service{
+    /* background-color: pink; */
+    width: 50%;
+    height: 90%;
+    padding-left: 40%;
+}
+
+.container .middle{
+    height: 24%;
+    /* background-color: brown; */
+    width: 100%;
+    padding-bottom: 0%;
+}
+
+.container .bottom{
+    height: 24%;
+    /* background-color: coral; */
+    width: 100%;
+}
+
+.container .middle .education{
+    height: 100%;
+    /* background-color: darkgoldenrod; */
+    width: 49.5%;
+    position: relative;
+    float: left;
+}
+
+.container .middle .experience{
+    height: 100%;
+    /* background-color: deeppink; */
+    width: 49.5%;
+    position: relative;
+    float: right;
+}
+
+.container .bottom .languages{
+    height: 100%;
+    /* background-color: dimgrey; */
+    width: 49.5%;
+    position: relative;
+    float: left;
+}
+
+.container .bottom .skills{
+    height: 100%;
+    /* background-color: fuchsia; */
+    width: 49.5%;
+    position: relative;
+    float: right;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+.lower_section_image {
+    width: 50px;
+    height: 50px;
+}
+
+.upper_section_image{
+    height: 350px;
+    z-index: 1;
+    box-shadow: 1px;
+}
+
+.container .middle .education .education_foto{
+    height: 25%;
+    padding-left: 45%;
+    background-color: #F7F7F7;
+}
+
+.container .middle .education .education_text{
+    height: 60%;
+    padding-left: 45%;
+    background-color: #F7F7F7;
+
+}
+
+.container .middle .experience .experience_foto{
+    height: 25%;
+    padding-left: 0%;
+    background-color: #F7F7F7;
+}
+
+.container .middle .experience .experience_text{
+    height: 60%;
+    padding-left: 0%;
+    width: 65%;
+    background-color: #F7F7F7;
+
+}
+
+.container .bottom .skills .skills_foto{
+    height: 25%;
+    padding-left: 0%;
+}
+
+.container .bottom .skills .skills_text{
+    height: 115px;
+    padding-left: 0%;  
+    width: 65%; 
+    background-color: #F7F7F7;
+
+}
+
+.container .bottom .languages .language_foto{
+    height: 25%;
+    padding-left: 45%;
+}
+
+.container .bottom .languages .language_text{
+    height: 115px;
+    padding-left: 45%;   
+    background-color: #F7F7F7;
+
+}
+
+button {
+    border-radius: 10px;
+    border: none;
+    width: 120px;
+    height: 25px;
+    font-size: smaller;
+    background-color: white;
+    
+}
+
+p{
+    color: #FFFFFF;
+}
+
+.drop {
+    background-color: #FFFFFF;
+    color:black;
+    padding: 0px;
+    font-size: 16px;
+    border: none;
+    font-display: inherit;
+  }
+
+  .drop_down {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: #FFFFFF;
+    display: block;
+  }
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.drop_down:hover .dropdown-content {
+    display: block;
+}
+.drop_down:hover .dropbtn {
+    background-color: aliceblue;
+}
